@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="author" content="Harsh Choudhary">
+    <!--<link rel="icon" href="../../favicon.ico">-->
+
+    <title>Find your photographer | Photowalk</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/cover.css" rel="stylesheet">
+  </head>
+
+  <body class="container">
+    <div class="cover col-lg-12">
+      <div class="cover-inner">
+        <ul>
+          <li id="head">
+            <h1><button class="btn btn-default">Let's find your Photographer!</button></h1>
+          </li>
+          <li id="location">
+            <h1>Location</h1>
+            <input type="text" class="form-control" placeholder="Any">
+            <button class="btn btn-default">Set Location</button>
+          </li>
+          <li id="category">
+            <h1>Category</h1>
+            <input type="text" class="form-control" placeholder="Street">
+            <button class="btn btn-default">Wooha!!</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="nav">
+    </div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('.cover-inner ul li button').click(function(){
+          var index = $(this).parent().index()+1;
+          $(".cover-inner li:nth-child("+index+")").fadeOut(500,"easeOutQuint");//hide("slide", { direction: "left" }, 2000);
+          $(".cover-inner li:nth-child("+(index+1)+")").delay(200).fadeIn(1000,"easeInQuint");
+        });
+      });
+    </script>
+  </body>
+</html>
